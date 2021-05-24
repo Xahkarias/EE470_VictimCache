@@ -169,7 +169,7 @@ module lru_testbench;
     
     logic clk;
     initial begin // Set up the clock
-		clk <= 0;
+		clk <= 1;
 		forever #(ClockDelay/2) clk <= ~clk;
 	end
 
@@ -178,14 +178,36 @@ module lru_testbench;
     initial begin
         @(posedge clk); reset <= 1; lru_update <= 8'b00000000; add_cache <= 1'b0; 
         @(posedge clk); reset <= 0; 
-        @(posedge clk); @(posedge clk);
 
         @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
         @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
         @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
-        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0; 
-        @(posedge clk); @(posedge clk);
+            
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0;  @(posedge clk); @(posedge clk);
+            //order here oldest-newest: 43210765
 
+
+        @(posedge clk); lru_update <= 8'b00000100; add_cache <= 1'b0; 
+            //order here oldest-newest: 43107652
+        @(posedge clk); lru_update <= 8'b00001000; add_cache <= 1'b0; 
+            //order here oldest-newest: 41076523
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+            //order here oldest-newest: 10765234
+                    @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0;  @(posedge clk); @(posedge clk);
+            
+
+        @(posedge clk); lru_update <= 8'b00000001; add_cache <= 1'b0; 
+            //order here oldest-newest: 17652340
+        @(posedge clk); lru_update <= 8'b00000010; add_cache <= 1'b0; 
+            //order here oldest-newest: 76523401
+        @(posedge clk); lru_update <= 8'b01000000; add_cache <= 1'b0; 
+            //order here oldest-newest: 75234016
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+            //order here oldest-newest: 52340167
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+            //order here oldest-newest: 23401675
+                        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0;  @(posedge clk); @(posedge clk);
+                            //order here oldest-newest: 52340617
 		$stop;
     end
 
