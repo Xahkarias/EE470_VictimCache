@@ -1,0 +1,1554 @@
+# Reading D:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab_regx64.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:20:45 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 01:20:45 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:20:45 on May 21,2021
+# vlog -reportprogress 300 ./regx64.sv 
+# -- Compiling module regx64
+# -- Compiling module regx64_testbench
+# 
+# Top level modules:
+# 	regx64_testbench
+# End time: 01:20:45 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work regx64_testbench 
+# Start time: 01:20:46 on May 21,2021
+# Loading sv_std.std
+# Loading work.regx64_testbench
+# Loading work.regx64
+# Loading work.mux2_1
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[0] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[1] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[2] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[3] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[4] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[5] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[6] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[7] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[8] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[9] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[10] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[11] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[12] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[13] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[14] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[15] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[16] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[17] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[18] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[19] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[20] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[21] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[22] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[23] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[24] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[25] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[26] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[27] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[28] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[29] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[30] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[31] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[32] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[33] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[34] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[35] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[36] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[37] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[38] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[39] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[40] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[41] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[42] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[43] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[44] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[45] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[46] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[47] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[48] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[49] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[50] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[51] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[52] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[53] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[54] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[55] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[56] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[57] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[58] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[59] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[60] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[61] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[62] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# ** Error: (vsim-3033) ./regx64.sv(27): Instantiation of 'D_FF' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Region: /regx64_testbench/dut/reg_gen[63] File: ./regx64.sv
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab_regx64.do PAUSED at line 13
+do runlab_regx64.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:24 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 01:22:24 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:24 on May 21,2021
+# vlog -reportprogress 300 ./regx64.sv 
+# -- Compiling module regx64
+# -- Compiling module regx64_testbench
+# 
+# Top level modules:
+# 	regx64_testbench
+# End time: 01:22:24 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:24 on May 21,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
+# 
+# Top level modules:
+# 	D_FF_testbench
+# End time: 01:22:24 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work regx64_testbench 
+# Start time: 01:20:46 on May 21,2021
+# Loading sv_std.std
+# Loading work.regx64_testbench
+# Loading work.regx64
+# Loading work.mux2_1
+# Loading work.D_FF
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[0]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[1]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[2]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[3]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[4]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[5]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[6]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[7]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[8]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[9]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[10]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[11]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[12]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[13]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[14]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[15]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[16]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[17]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[18]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[19]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[20]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[21]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[22]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[23]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[24]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[25]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[26]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[27]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[28]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[29]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[30]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[31]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[32]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[33]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[34]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[35]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[36]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[37]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[38]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[39]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[40]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[41]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[42]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[43]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[44]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[45]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[46]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[47]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[48]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[49]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[50]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[51]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[52]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[53]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[54]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[55]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[56]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[57]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[58]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[59]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[60]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[61]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[62]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[63]/singFF File: ./D_FF.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./regx64.sv(59)
+#    Time: 375 ns  Iteration: 1  Instance: /regx64_testbench
+# Break in Module regx64_testbench at ./regx64.sv line 59
+do runlab_regx64.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:55 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 01:22:55 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:55 on May 21,2021
+# vlog -reportprogress 300 ./regx64.sv 
+# -- Compiling module regx64
+# -- Compiling module regx64_testbench
+# 
+# Top level modules:
+# 	regx64_testbench
+# End time: 01:22:55 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:22:55 on May 21,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
+# 
+# Top level modules:
+# 	D_FF_testbench
+# End time: 01:22:55 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:22:57 on May 21,2021, Elapsed time: 0:02:11
+# Errors: 64, Warnings: 64
+# vsim -voptargs=""+acc"" -t 1ps -lib work regx64_testbench 
+# Start time: 01:22:57 on May 21,2021
+# Loading sv_std.std
+# Loading work.regx64_testbench
+# Loading work.regx64
+# Loading work.mux2_1
+# Loading work.D_FF
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[0]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[1]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[2]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[3]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[4]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[5]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[6]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[7]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[8]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[9]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[10]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[11]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[12]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[13]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[14]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[15]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[16]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[17]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[18]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[19]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[20]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[21]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[22]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[23]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[24]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[25]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[26]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[27]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[28]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[29]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[30]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[31]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[32]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[33]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[34]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[35]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[36]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[37]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[38]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[39]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[40]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[41]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[42]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[43]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[44]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[45]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[46]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[47]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[48]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[49]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[50]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[51]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[52]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[53]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[54]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[55]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[56]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[57]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[58]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[59]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[60]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[61]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[62]/singFF File: ./D_FF.sv
+# ** Warning: (vsim-3015) ./regx64.sv(27): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: ./D_FF.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /regx64_testbench/dut/reg_gen[63]/singFF File: ./D_FF.sv
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./regx64.sv(59)
+#    Time: 375 ns  Iteration: 1  Instance: /regx64_testbench
+# Break in Module regx64_testbench at ./regx64.sv line 59
+do runlab_regx64.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:24:03 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 01:24:03 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:24:03 on May 21,2021
+# vlog -reportprogress 300 ./regx64.sv 
+# -- Compiling module regx64
+# -- Compiling module regx64_testbench
+# 
+# Top level modules:
+# 	regx64_testbench
+# End time: 01:24:03 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 01:24:03 on May 21,2021
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# -- Compiling module D_FF_testbench
+# 
+# Top level modules:
+# 	D_FF_testbench
+# End time: 01:24:03 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 01:24:05 on May 21,2021, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 64
+# vsim -voptargs=""+acc"" -t 1ps -lib work regx64_testbench 
+# Start time: 01:24:05 on May 21,2021
+# Loading sv_std.std
+# Loading work.regx64_testbench
+# Loading work.regx64
+# Loading work.mux2_1
+# Loading work.D_FF
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./regx64.sv(59)
+#    Time: 375 ns  Iteration: 1  Instance: /regx64_testbench
+# Break in Module regx64_testbench at ./regx64.sv line 59
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:17:56 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:17:56 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:17:56 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:17:56 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:17:58 on May 21,2021, Elapsed time: 2:53:53
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
+# Start time: 04:17:58 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux4_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# ** Error: Cannot open macro file: mux8_1_wave.do
+# Error in macro ./runlab_mux8_1.do line 18
+# Cannot open macro file: mux8_1_wave.do
+#     while executing
+# "do mux8_1_wave.do"
+add wave -position end  sim:/mux4_1_testbench/clk
+add wave -position end  sim:/mux4_1_testbench/data
+add wave -position end  sim:/mux4_1_testbench/sel
+add wave -position end  sim:/mux4_1_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/mux8_1_wave.do
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:18:46 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:18:47 on May 21,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:18:47 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:18:47 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:18:48 on May 21,2021, Elapsed time: 0:00:50
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
+# Start time: 04:18:48 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux4_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./mux8_1.sv(67)
+#    Time: 875 ns  Iteration: 1  Instance: /mux4_1_testbench
+# Break in Module mux4_1_testbench at ./mux8_1.sv line 67
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:40:51 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:40:51 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:40:51 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:40:51 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:40:51 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# ** Error: ./bytecutter.sv(40): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(39): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(38): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(37): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(36): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(35): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(34): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(33): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# -- Compiling module bytecutter_testbench
+# ** Error: ./bytecutter.sv(55): (vlog-2730) Undefined variable: 'clk'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'data_out'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'data_in'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'write_en'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'clk'.
+# End time: 04:40:51 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 13, Warnings: 0
+# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab_bytecutter.do line 9
+# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./bytecutter.sv""
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:05 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:41:05 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:05 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:41:05 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:05 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# ** Error: ./bytecutter.sv(40): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(39): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(38): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(37): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(36): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(35): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(34): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(33): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# -- Compiling module bytecutter_testbench
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'data_out'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'data_in'.
+# ** Error: ./bytecutter.sv(58): (vlog-2730) Undefined variable: 'write_en'.
+# End time: 04:41:05 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 11, Warnings: 0
+# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab_bytecutter.do line 9
+# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./bytecutter.sv""
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:27 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:41:27 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:27 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:41:27 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:27 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# ** Error: ./bytecutter.sv(40): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(39): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(38): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(37): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(36): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(35): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(34): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# ** Error: ./bytecutter.sv(33): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
+# -- Compiling module bytecutter_testbench
+# End time: 04:41:27 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab_bytecutter.do line 9
+# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./bytecutter.sv""
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:40 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:41:40 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:40 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:41:40 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:41:40 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:41:40 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:41:42 on May 21,2021, Elapsed time: 0:22:54
+# Errors: 41, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
+# Start time: 04:41:42 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux4_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# ** Error: Cannot open macro file: bytecutter_wave.do
+# Error in macro ./runlab_bytecutter.do line 19
+# Cannot open macro file: bytecutter_wave.do
+#     while executing
+# "do bytecutter_wave.do"
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:00 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:43:00 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:00 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 04:43:00 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:43:03 on May 21,2021, Elapsed time: 0:01:21
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux8_1_testbench 
+# Start time: 04:43:03 on May 21,2021
+# ** Error: (vsim-3170) Could not find 'mux8_1_testbench'.
+#         Searched libraries:
+#             C:/Users/eveni/Documents/Homework/EE470/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab_mux8_1.do PAUSED at line 13
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:18 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:43:18 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:18 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:43:18 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux8_1_testbench 
+# Start time: 04:43:03 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux8_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# ** Error: (vish-4014) No objects found matching '/mux4_1_testbench/clk'.
+# Executing ONERROR command at macro ./mux8_1_wave.do line 3
+# ** Error: (vish-4014) No objects found matching '/mux4_1_testbench/data'.
+# Executing ONERROR command at macro ./mux8_1_wave.do line 4
+# ** Error: (vish-4014) No objects found matching '/mux4_1_testbench/sel'.
+# Executing ONERROR command at macro ./mux8_1_wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/mux4_1_testbench/out'.
+# Executing ONERROR command at macro ./mux8_1_wave.do line 6
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./mux8_1.sv(67)
+#    Time: 875 ns  Iteration: 1  Instance: /mux8_1_testbench
+# Break in Module mux8_1_testbench at ./mux8_1.sv line 67
+add wave -position end  sim:/mux8_1_testbench/clk
+add wave -position end  sim:/mux8_1_testbench/data
+add wave -position end  sim:/mux8_1_testbench/sel
+add wave -position end  sim:/mux8_1_testbench/out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/mux8_1_wave.do
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:53 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:43:54 on May 21,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:43:54 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:43:54 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:43:56 on May 21,2021, Elapsed time: 0:00:53
+# Errors: 13, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux8_1_testbench 
+# Start time: 04:43:56 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux8_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./mux8_1.sv(67)
+#    Time: 875 ns  Iteration: 1  Instance: /mux8_1_testbench
+# Break in Module mux8_1_testbench at ./mux8_1.sv line 67
+do bytecutter.sv
+# ** Error: invalid command name "`timescale"
+# Error in macro ./bytecutter.sv line 1
+# invalid command name "`timescale"
+#     while executing
+# "`timescale 1ns/10ps"
+do bytecutter.sv
+# ** Error: invalid command name "`timescale"
+# Error in macro ./bytecutter.sv line 2
+# invalid command name "`timescale"
+#     while executing
+# "`timescale 1ns/10ps"
+do bytecutter.sv
+# ** Error: invalid command name "`timescale"
+# Error in macro ./bytecutter.sv line 2
+# invalid command name "`timescale"
+#     while executing
+# "`timescale 1ns/10ps"
+do bytecutter.sv
+# ** Error: bad option "bytecutter": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+# Error in macro ./bytecutter.sv line 2
+# bad option "bytecutter": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+#     while executing
+# "module bytecutter (block_in, offset, byte_out)"
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:49:09 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# ** Error: (vlog-13069) ./mux2_1.sv(18): near "=": syntax error, unexpected '='.
+# ** Error: ./mux2_1.sv(18): (vlog-13205) Syntax error found in the scope following 'notSel'. Is there a missing '::'?
+# End time: 04:49:09 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab_bytecutter.do line 7
+# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:49:29 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:49:29 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:49:29 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:49:29 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:49:29 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:49:29 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:49:34 on May 21,2021, Elapsed time: 0:05:38
+# Errors: 17, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:49:34 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# ** Error: Cannot open macro file: bytecutter_wave.do
+# Error in macro ./runlab_bytecutter.do line 19
+# Cannot open macro file: bytecutter_wave.do
+#     while executing
+# "do bytecutter_wave.do"
+add wave -position end  sim:/bytecutter_testbench/clk
+add wave -position end  sim:/bytecutter_testbench/block_in
+add wave -position end  sim:/bytecutter_testbench/offset
+add wave -position end  sim:/bytecutter_testbench/byte_out
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:04 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:51:04 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:04 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:51:04 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:04 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:51:04 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:51:06 on May 21,2021, Elapsed time: 0:01:32
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:51:06 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# ** Error: Cannot open macro file: bytecutter_wave.do
+# Error in macro ./runlab_bytecutter.do line 19
+# Cannot open macro file: bytecutter_wave.do
+#     while executing
+# "do bytecutter_wave.do"
+add wave -position end  sim:/bytecutter_testbench/clk
+add wave -position end  sim:/bytecutter_testbench/block_in
+add wave -position end  sim:/bytecutter_testbench/offset
+add wave -position end  sim:/bytecutter_testbench/byte_out
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/bytecutter_wave.do
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:41 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:51:41 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:41 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:51:41 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:51:41 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:51:41 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:51:43 on May 21,2021, Elapsed time: 0:00:37
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:51:43 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(68)
+#    Time: 175 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 68
+add wave -position end  sim:/bytecutter_testbench/dut/word
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/bytecutter_wave.do
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:52:52 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:52:52 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:52:52 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:52:52 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:52:52 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:52:52 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:52:57 on May 21,2021, Elapsed time: 0:01:14
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:52:57 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(68)
+#    Time: 175 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 68
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:53:26 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:53:26 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:53:27 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:53:27 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:53:27 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:53:27 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:53:32 on May 21,2021, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:53:32 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(68)
+#    Time: 175 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 68
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:56:01 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 04:56:01 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:56:01 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 04:56:01 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:56:01 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 04:56:01 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:56:06 on May 21,2021, Elapsed time: 0:02:34
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 04:56:06 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(69)
+#    Time: 225 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 69
+add wave -position end  sim:/bytecutter_testbench/dut/genblk1[0]/muxer1/data
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/bytecutter_wave.do
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:00:26 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 05:00:26 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:00:26 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 05:00:26 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:00:26 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 05:00:26 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:00:30 on May 21,2021, Elapsed time: 0:04:24
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 05:00:30 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(69)
+#    Time: 225 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 69
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:03:38 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 05:03:38 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:03:38 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 05:03:38 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:03:42 on May 21,2021, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux8_1_testbench 
+# Start time: 05:03:42 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux8_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./mux8_1.sv(66)
+#    Time: 875 ps  Iteration: 1  Instance: /mux8_1_testbench
+# Break in Module mux8_1_testbench at ./mux8_1.sv line 66
+do runlab_mux8_1.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:05:25 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 05:05:25 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:05:25 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 05:05:25 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:05:27 on May 21,2021, Elapsed time: 0:01:45
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux8_1_testbench 
+# Start time: 05:05:27 on May 21,2021
+# Loading sv_std.std
+# Loading work.mux8_1_testbench
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./mux8_1.sv(66)
+#    Time: 875 ps  Iteration: 1  Instance: /mux8_1_testbench
+# Break in Module mux8_1_testbench at ./mux8_1.sv line 66
+do runlab_bytecutter.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:05:37 on May 21,2021
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# -- Compiling module mux2_1_testbench
+# 
+# Top level modules:
+# 	mux2_1_testbench
+# End time: 05:05:37 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:05:37 on May 21,2021
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# -- Compiling module mux8_1_testbench
+# 
+# Top level modules:
+# 	mux8_1_testbench
+# End time: 05:05:37 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:05:37 on May 21,2021
+# vlog -reportprogress 300 ./bytecutter.sv 
+# -- Compiling module bytecutter
+# -- Compiling module bytecutter_testbench
+# 
+# Top level modules:
+# 	bytecutter_testbench
+# End time: 05:05:37 on May 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:05:40 on May 21,2021, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work bytecutter_testbench 
+# Start time: 05:05:40 on May 21,2021
+# Loading sv_std.std
+# Loading work.bytecutter_testbench
+# Loading work.bytecutter
+# Loading work.mux8_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./bytecutter.sv(70)
+#    Time: 225 ps  Iteration: 1  Instance: /bytecutter_testbench
+# Break in Module bytecutter_testbench at ./bytecutter.sv line 70
+# End time: 21:39:49 on May 23,2021, Elapsed time: 64:34:09
+# Errors: 0, Warnings: 0
