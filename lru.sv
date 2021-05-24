@@ -1,4 +1,4 @@
-module lru(lru_number, lru_update, add_cache, reset);
+module lru (lru_number, lru_update, add_cache, reset, clk);
     output logic [7:0] lru_number;
         //each bit corresponds to which thing is the lru
         //this is a constant output
@@ -12,7 +12,7 @@ module lru(lru_number, lru_update, add_cache, reset);
     input logic reset;
         //reset
         //7 is the oldest, 0 is the newest in lru
-
+    input logic clk;
     
     //THIS LOOKS LIKE A MESS BUT IT MAKES SENSE (and doesnt use as much silicon as you'd think)
     //notes for myself:
@@ -90,13 +90,13 @@ module lru(lru_number, lru_update, add_cache, reset);
     register #(.width(1)) r4_6 (.data_out(output_6[1]), .data_in(on_6[1]), .write_en(on_6[1]), .reset(reset | off_6[1]), .clk(clk));
     register #(.width(1)) r5_6 (.data_out(output_6[0]), .data_in(on_6[0]), .write_en(on_6[0]), .reset(reset | off_6[0]), .clk(clk));
     //row 7
-    register #(.width(1)) r0_6 (.data_out(output_7[6]), .data_in(on_7[6]), .write_en(on_7[6]), .reset(reset | off_7[6]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[5]), .data_in(on_7[5]), .write_en(on_7[5]), .reset(reset | off_7[5]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[4]), .data_in(on_7[4]), .write_en(on_7[4]), .reset(reset | off_7[4]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[3]), .data_in(on_7[3]), .write_en(on_7[3]), .reset(reset | off_7[3]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[2]), .data_in(on_7[2]), .write_en(on_7[2]), .reset(reset | off_7[2]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[1]), .data_in(on_7[1]), .write_en(on_7[1]), .reset(reset | off_7[1]), .clk(clk));
-    register #(.width(1)) r0_6 (.data_out(output_7[0]), .data_in(on_7[0]), .write_en(on_7[0]), .reset(reset | off_7[0]), .clk(clk));
+    register #(.width(1)) r0_7 (.data_out(output_7[6]), .data_in(on_7[6]), .write_en(on_7[6]), .reset(reset | off_7[6]), .clk(clk));
+    register #(.width(1)) r1_7 (.data_out(output_7[5]), .data_in(on_7[5]), .write_en(on_7[5]), .reset(reset | off_7[5]), .clk(clk));
+    register #(.width(1)) r2_7 (.data_out(output_7[4]), .data_in(on_7[4]), .write_en(on_7[4]), .reset(reset | off_7[4]), .clk(clk));
+    register #(.width(1)) r3_7 (.data_out(output_7[3]), .data_in(on_7[3]), .write_en(on_7[3]), .reset(reset | off_7[3]), .clk(clk));
+    register #(.width(1)) r4_7 (.data_out(output_7[2]), .data_in(on_7[2]), .write_en(on_7[2]), .reset(reset | off_7[2]), .clk(clk));
+    register #(.width(1)) r5_7 (.data_out(output_7[1]), .data_in(on_7[1]), .write_en(on_7[1]), .reset(reset | off_7[1]), .clk(clk));
+    register #(.width(1)) r6_7 (.data_out(output_7[0]), .data_in(on_7[0]), .write_en(on_7[0]), .reset(reset | off_7[0]), .clk(clk));
 
 
     /* //////////////////////////////////////
@@ -137,33 +137,56 @@ module lru(lru_number, lru_update, add_cache, reset);
     //TODO THIS
     
     //assigning on signals
-    
+        //(make left on)
+    assign on_1 = lru_number_input[1];
+    assign on_2 = {2{lru_number_input[2]}}; 
+    assign on_3 = {3{lru_number_input[3]}};
+    assign on_4 = {4{lru_number_input[4]}};
+    assign on_5 = {5{lru_number_input[5]}};
+    assign on_6 = {6{lru_number_input[6]}};
+    assign on_7 = {7{lru_number_input[7]}};
+
     //assigning off signals
     
+    assign off_1 = lru_number_input[0];
+    assign off_2 = {lru_number_input[0], lru_number_input[1]};
+    assign off_3 = {lru_number_input[0], lru_number_input[1], lru_number_input[2]};
+    assign off_4 = {lru_number_input[0], lru_number_input[1], lru_number_input[2], lru_number_input[3]};
+    assign off_5 = {lru_number_input[0], lru_number_input[1], lru_number_input[2], lru_number_input[3], lru_number_input[4]};
+    assign off_6 = {lru_number_input[0], lru_number_input[1], lru_number_input[2], lru_number_input[3], lru_number_input[4], lru_number_input[5]};
+    assign off_7 = {lru_number_input[0], lru_number_input[1], lru_number_input[2], lru_number_input[3], lru_number_input[4], lru_number_input[5], lru_number_input[6]};
     
+
+endmodule
+
+module lru_testbench;
+    parameter ClockDelay = 50;
+
+    logic [7:0] lru_number;
+    logic [7:0] lru_update;
+    logic add_cache;
+    logic reset;
     
-    
-    
-    
-    
-    
-    logic on_1;
-    logic [1:0] on_2;
-    logic [2:0] on_3;
-    logic [3:0] on_4;
-    logic [4:0] on_5;
-    logic [5:0] on_6;
-    logic [6:0] on_7;
-       //TODO: use these
-    
-    //input off wires (these are horizontal and left-justified) and will be ored with global reset (labeled by row)
-    logic off_1;
-    logic [1:0] off_2;
-    logic [2:0] off_3;
-    logic [3:0] off_4;
-    logic [4:0] off_5;
-    logic [5:0] off_6;
-    logic [6:0] off_7;
-       //TODO: use these
+    logic clk;
+    initial begin // Set up the clock
+		clk <= 0;
+		forever #(ClockDelay/2) clk <= ~clk;
+	end
+
+    lru dut (.lru_number, .lru_update, .add_cache, .reset, .clk);
+
+    initial begin
+        @(posedge clk); reset <= 1; lru_update <= 8'b00000000; add_cache <= 1'b0; 
+        @(posedge clk); reset <= 0; 
+        @(posedge clk); @(posedge clk);
+
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b1; 
+        @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0; 
+        @(posedge clk); @(posedge clk);
+
+		$stop;
+    end
 
 endmodule

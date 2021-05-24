@@ -13,6 +13,8 @@ module register #(parameter width = 1) (data_out, data_in, write_en, reset, clk)
 	input logic clk;
 	input logic reset;
 	
+	logic [width - 1:0] next;
+
 	genvar i;
 	generate
 		for (i = 0; i < width; i++) begin : eachDFF
