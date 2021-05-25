@@ -130,7 +130,11 @@ module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, reset, 
 	
 	logic [5:0] piped_index_input;
 		//these are the other bits of addr_in
-	register #(.width(6)) piped_input_index (.data_out(piped_index_input), .data_in(addr_in[11:6]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));
+	register #(.width(6)) piped_input_index (.data_out(piped_index_input), .data_in(addr_in[11:6]), .write_en(1'b1), .reset(squasher), .clk(clk));
+
+	logic piped_write_en;
+	register #(.width(1)) piped_valid (.data_out(piped_write_en), .data_in(write_en), .write_en(1'b1), .reset(reset), .clk(clk));	
+		//this pipelines the write enable bit to be a final output checker. This is only squashed on a reset
 
 	/* //////////////////////////////////////
 	Load CYCLE 2
@@ -142,8 +146,10 @@ module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, reset, 
 			isCorrect[z] = ({phys_tag_ret, piped_index_input} == {phys_tag_pipeline[z], index_bits_pipeline[z]}) && valid_bits_pipeline[z];
 		end
 	end
-	//TODO: isFound should output the |reducted of isCorrect, but have to check about doing a write cycle (gotta pipeline)
 
+	assign is_found = (|isCorrect) && (!piped_write_en);
+		//this outputs if the data is found AND it is not a write cycle
+	
 
 	//TODO: isCorrect then needs to select the correct cut byte, and then check for doing a write cycle (just and all the bits with isFound)
 	//TODO: then output
