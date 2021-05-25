@@ -1,27 +1,34 @@
 
 
 `timescale 1ns/10ps
-module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, phys_tag_str, reset, byte_out, data_out, found_out, clk);
+module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, reset, byte_out, data_out, is_found, clk);
 	input logic [11:0] addr_in;
 		//this is the part of vaddr that isnt the vtag
 	input logic [511:0] data_in;
 		//this is the data to overwrite part of the cache
+		//TODO USE THIS
 	input logic write_en;
 		//this is the toggle to actually use data_in
+		//TODO USE THIS
 	input logic [43:0] phys_tag_ret;
 		//this is the incoming physical tag from the tlb in the retieval pipeline
+		//note this will comb in a cycle late
 	input logic tlb_miss;
 		//this is true on a tlb miss
-	input logic [43:0] phys_tag_str;
-		//this is the incoming physical tag from the tlb in the storage pipeline
+		//this DOES NOT COME A CYCLE LATE, but at the end of the cycle
 	input logic reset;
 	output logic [7:0] byte_out;
 		//the result of the victim cache search
+		//TODO USE THIS
 	output logic [511:0] data_out;
 		//data out, theorically will be sent to L1 dcache to replace a value there
-		//this is triggered when a value is 
-	output logic found_out;
+		//this is triggered when a value is found
+		//TODO USE THIS (this will be last)
+		//TODO this will require pipelining the entire cache yikes.
+		//TODO, will also require pipelining the entire tag line too.
+	output logic is_found;
 		//triggered if data is actually found in the data cache
+		//TODO USE THIS
 	input logic clk;
 		//this is the clk
 
@@ -71,7 +78,7 @@ module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, phys_ta
 
 	genvar j;
     generate
-        for (j = 0; j < 7; j = j + 1) begin
+        for (j = 0; j < 8; j = j + 1) begin
 			register #(.width(512)) cache_block (.data_out(blks[j]), .data_in(cache_input), .write_en(write_en_array[j]), .reset(reset), .clk(clk));
 				//this generates the data cache
 			register #(.width(44)) tag_block (.data_out(phys_tag[j]), .data_in(tag_input), .write_en(write_en_array[j]), .reset(reset), .clk(clk));
@@ -86,8 +93,7 @@ module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, phys_ta
 
 
 	//TODO: declare triangular lru storage
-	//TODO: lru bits will need to have a default value loaded
-
+	//TODO: lru doesnt like having both add_cache and lru_update used, fix that
 	
 	/* //////////////////////////////////////
 	Load CYCLE 1
@@ -106,25 +112,40 @@ module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, phys_ta
 	logic [7:0][5:0] index_bits_pipeline;
 	logic [7:0] valid_bits_pipeline;
 		//TODO use these
-	//after this is the pipeline stuff
+	
 	genvar k;
+	logic squasher;
+	assign squasher = tlb_miss || reset || write_en;
+		//this squashes a read on a tlb miss, a reset, or if we are writing
     generate
-        for (k = 0; k < 7; k = k + 1) begin
-			register #(.width(8)) piped_byte (.data_out(cut_bytes_pipeline[k]), .data_in(cut_bytes[k]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));
-			register #(.width(44)) piped_tag (.data_out(phys_tag_pipeline[j]), .data_in(phys_tag[k]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));
-			register #(.width(6)) index_block (.data_out(index_bits_pipeline[j]), .data_in(index_bits[k]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));	
-			register #(.width(1)) valid_block (.data_out(valid_bits_pipeline[j]), .data_in(valid_bits[k]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));	
-			//pipeline registers, the tlb_miss squashes all output
+        for (k = 0; k < 8; k = k + 1) begin
+			register #(.width(8)) piped_byte (.data_out(cut_bytes_pipeline[k]), .data_in(cut_bytes[k]), .write_en(1'b1), .reset(squasher), .clk(clk));
+			register #(.width(44)) piped_tag (.data_out(phys_tag_pipeline[j]), .data_in(phys_tag[k]), .write_en(1'b1), .reset(squasher), .clk(clk));
+			register #(.width(6)) piped_index (.data_out(index_bits_pipeline[j]), .data_in(index_bits[k]), .write_en(1'b1), .reset(squasher), .clk(clk));	
+			register #(.width(1)) piped_valid (.data_out(valid_bits_pipeline[j]), .data_in(valid_bits[k]), .write_en(1'b1), .reset(squasher), .clk(clk));	
+			//pipeline registers, the tlb_miss and write_en squashes all output
         end
     endgenerate
-
+	//this is the pipelined cache stuff
+	
+	logic [5:0] piped_index_input;
+		//these are the other bits of addr_in
+	register #(.width(6)) piped_input_index (.data_out(piped_index_input), .data_in(addr_in[11:6]), .write_en(1'b1), .reset(tlb_miss | reset), .clk(clk));
 
 	/* //////////////////////////////////////
 	Load CYCLE 2
 	////////////////////////////////////// */
-	//TODO: comparator with the incoming phys tag from tlb vs stored phys_tag
-	//TODO: also comparator between stored index bits and index bits from (addr_in[11:6])
-		//this is so that we can make sure that we have the exact data that we want
+
+	logic [7:0] isCorrect;
+	always_comb begin
+		for (z = 0; z < 8, z = z +1) begin
+			isCorrect[z] = ({phys_tag_ret, piped_index_input} == {phys_tag_pipeline[z], index_bits_pipeline[z]}) && valid_bits_pipeline[z];
+		end
+	end
+	//TODO: isFound should output the |reducted of isCorrect, but have to check about doing a write cycle (gotta pipeline)
+
+
+	//TODO: isCorrect then needs to select the correct cut byte, and then check for doing a write cycle (just and all the bits with isFound)
 	//TODO: then output
 
 	/* //////////////////////////////////////

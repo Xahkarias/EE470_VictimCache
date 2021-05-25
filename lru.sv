@@ -6,9 +6,11 @@ module lru (lru_number, lru_update, add_cache, reset, clk);
         //change one of these bits to 1 for 1 cycle in order
         //to represent a specific cache block being updated to be most recent
         //leave resting at zero
+        //CANNOT BE ON AT THE SAME TIME AS ADD_CACHE
     input logic add_cache;
         ///change one of these bits to 1 for 1 cycle in order
         //to act as an eviction on oldest
+        //CANNOT BE ON AT THE SAME TIME AS LRU_UPDATE
     input logic reset;
         //reset
         //7 is the oldest, 0 is the newest in lru

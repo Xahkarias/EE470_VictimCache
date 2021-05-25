@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/eveni/Documents/Homework/EE470
 vbytecutter
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1621835404
+Z2 !s110 1621919080
 !i10b 1
 !s100 3<AhfDVKombgFK]_4HiLT3
 IKfzA<YFGSQ8<a0H;SSmUF3
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1621835404.000000
+Z9 !s108 1621919080.000000
 Z10 !s107 ./bytecutter.sv|
 Z11 !s90 -reportprogress|300|./bytecutter.sv|
 !i113 1
@@ -104,48 +104,48 @@ R12
 n@d_@f@f_testbench
 vlru
 R1
-R2
+Z19 !s110 1621919081
 !i10b 1
 !s100 ADd?kdTE7dHliSVcd]1z_0
 I29UmaCl2VzG;?8cY?kfWb0
 R3
-Z19 !s105 lru_sv_unit
+Z20 !s105 lru_sv_unit
 S1
 R0
-Z20 w1621835402
-Z21 8./lru.sv
-Z22 F./lru.sv
+Z21 w1621835641
+Z22 8./lru.sv
+Z23 F./lru.sv
 L0 1
 R8
 r1
 !s85 0
 31
 R9
-Z23 !s107 ./lru.sv|
-Z24 !s90 -reportprogress|300|./lru.sv|
+Z24 !s107 ./lru.sv|
+Z25 !s90 -reportprogress|300|./lru.sv|
 !i113 1
 R12
 vlru_testbench
 R1
-R2
-!i10b 1
-!s100 IlW;`m8_@fPY6TU`H]UfV1
-IBk_@V=jMPJk>n:lzLdTU;3
-R3
 R19
+!i10b 1
+!s100 ^RUhaN4cd?A2][`XJG7Ro1
+I<TTX0MhZbl94NXg3^M4`f3
+R3
+R20
 S1
 R0
-R20
 R21
 R22
+R23
 L0 162
 R8
 r1
 !s85 0
 31
 R9
-R23
 R24
+R25
 !i113 1
 R12
 vmux2_1
@@ -155,20 +155,20 @@ R2
 !s100 @21zT_J;nHSRLH<:2I0Ib3
 Im`J1o8DD>m9MFOD?0`Ggg1
 R3
-Z25 !s105 mux2_1_sv_unit
+Z26 !s105 mux2_1_sv_unit
 S1
 R0
-Z26 w1621598722
-Z27 8./mux2_1.sv
-Z28 F./mux2_1.sv
+Z27 w1621598722
+Z28 8./mux2_1.sv
+Z29 F./mux2_1.sv
 L0 9
 R8
 r1
 !s85 0
 31
 R9
-Z29 !s107 ./mux2_1.sv|
-Z30 !s90 -reportprogress|300|./mux2_1.sv|
+Z30 !s107 ./mux2_1.sv|
+Z31 !s90 -reportprogress|300|./mux2_1.sv|
 !i113 1
 R12
 vmux2_1_testbench
@@ -178,20 +178,20 @@ R2
 !s100 K?Q6R<SXVURf`i;B_7SLL0
 I<H_KWlFi9a0HZ2V_HDM3K3
 R3
-R25
+R26
 S1
 R0
-R26
 R27
 R28
+R29
 L0 19
 R8
 r1
 !s85 0
 31
 R9
-R29
 R30
+R31
 !i113 1
 R12
 vmux4_1_testbench
@@ -201,20 +201,20 @@ R1
 !s100 J[bWDj:?=nTCV0`@;6gZZ3
 IS<WWSDV=9JBg_G0HDUIeW0
 R3
-Z31 !s105 mux8_1_sv_unit
+Z32 !s105 mux8_1_sv_unit
 S1
 R0
 w1621595833
-Z32 8./mux8_1.sv
-Z33 F./mux8_1.sv
+Z33 8./mux8_1.sv
+Z34 F./mux8_1.sv
 L0 31
 R8
 r1
 !s85 0
 31
 !s108 1621597380.000000
-Z34 !s107 ./mux8_1.sv|
-Z35 !s90 -reportprogress|300|./mux8_1.sv|
+Z35 !s107 ./mux8_1.sv|
+Z36 !s90 -reportprogress|300|./mux8_1.sv|
 !i113 1
 R12
 vmux8_1
@@ -224,20 +224,20 @@ R2
 !s100 9W^4^K6nnV`0BYUNlaUXO2
 IgA<zEK3ozn=>@JTh4VC;:0
 R3
-R31
+R32
 S1
 R0
-Z36 w1621597583
-R32
+Z37 w1621597583
 R33
+R34
 L0 2
 R8
 r1
 !s85 0
 31
 R9
-R34
 R35
+R36
 !i113 1
 R12
 vmux8_1_testbench
@@ -247,20 +247,20 @@ R2
 !s100 KhkG`A6gI:`IS=;>AMDV93
 I_jJEQ89aVYBGbDSYR;ikJ1
 R3
-R31
+R32
 S1
 R0
-R36
-R32
+R37
 R33
+R34
 L0 30
 R8
 r1
 !s85 0
 31
 R9
-R34
 R35
+R36
 !i113 1
 R12
 vregister
@@ -288,47 +288,47 @@ R9
 R12
 vregx64
 R1
-Z37 !s110 1621585443
+Z38 !s110 1621585443
 !i10b 1
 !s100 CBQna6AGZKo1C]1de<U?61
 I^dN^]32mbJfB@>_k`Gmk_3
 R3
-Z38 !s105 regx64_sv_unit
+Z39 !s105 regx64_sv_unit
 S1
 R0
-Z39 w1621585432
-Z40 8./regx64.sv
-Z41 F./regx64.sv
+Z40 w1621585432
+Z41 8./regx64.sv
+Z42 F./regx64.sv
 L0 15
 R8
 r1
 !s85 0
 31
-Z42 !s108 1621585443.000000
-Z43 !s107 ./regx64.sv|
-Z44 !s90 -reportprogress|300|./regx64.sv|
+Z43 !s108 1621585443.000000
+Z44 !s107 ./regx64.sv|
+Z45 !s90 -reportprogress|300|./regx64.sv|
 !i113 1
 R12
 vregx64_testbench
 R1
-R37
+R38
 !i10b 1
 !s100 RfUoB7hcNg2I3:`FH[PQJ3
 IHj733S1Ud`U@6@JXR9JD>2
 R3
-R38
+R39
 S1
 R0
-R39
 R40
 R41
+R42
 L0 35
 R8
 r1
 !s85 0
 31
-R42
 R43
 R44
+R45
 !i113 1
 R12
