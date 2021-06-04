@@ -14,20 +14,16 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	input logic tlb_miss;
 		//this is true on a tlb miss
 		//NOTE: this arrives a cycle late
-        //TODO USE THIS
 	input logic reset;
     input logic clk;
 		//this is the clk
 
 	output logic [7:0] byte_out;
 		//the result of the victim cache search
-		//TODO USE THIS
 	output logic is_found;
 		//triggered if data is actually found in the data cache
-		//TODO USE THIS
     output logic [511:0] block_out;
         //used to contain evicted block
-        //TODO USE THIS
 	
 
 
@@ -55,7 +51,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	////////////////////////////////////// */
     logic reset_TL_TV_reg;
     assign reset_TL_TV_reg = reset || (tlb_miss && !pre_tl_tl_writeEn_pipeline);
-        //the registers after this section reset on two occassions:
+        //the registers at the end of this section reset on two occassions:
         //1. If the reset is triggered
         //2. If the TLB misses, and it is not in write mode
 
@@ -124,9 +120,10 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     //declaring outputs of the pipeline (for use in next one)
     logic tl_tv_found_target_pipeline;
     logic [511:0] tl_tv_target_block_pipeline;
-    logic [5:0] tl_tv_offset_pipeline;
         //on read, it holds the target output
         //on write, it holds the evicted block
+    logic [5:0] tl_tv_offset_pipeline;
+
 
     //TODO: make pipelines (reset them on a tlb miss if read)
 
@@ -157,7 +154,18 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     logic tv_dm_found_target_pipeline;
     logic [511:0] tv_dm_target_block_pipeline;
     logic [2:0] tv_dm_byte_select_pipeline;
-    logic [63:0] tv_dm_selected_work_pipeline;
+    logic [63:0] tv_dm_selected_word_pipeline;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -173,23 +181,28 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	DM
 	////////////////////////////////////// */
     //declaring logic signals
+    logic [7:0] selected_byte;
 
-    //TODO: select byte
-    //TODO: output byte and isFound
-    //output
+    genvar j;
+    generate
+        for (j = 0; j < 8; j = j + 1) begin
+            mux8_1 dm_muxer (.out(selected_byte[j]), 
+                .data({
+                    tv_dm_selected_word_pipeline[j+56],
+                    tv_dm_selected_word_pipeline[j+48],
+                    tv_dm_selected_word_pipeline[j+40],
+                    tv_dm_selected_word_pipeline[j+32],
+                    tv_dm_selected_word_pipeline[j+24],
+                    tv_dm_selected_word_pipeline[j+16],
+                    tv_dm_selected_word_pipeline[j+8],
+                    tv_dm_selected_word_pipeline[j]}), 
+                .sel(tv_dm_byte_select_pipeline));
+        end
+        //this generates the stuff that picks which byte
+    endgenerate
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    assign byte_out = selected_byte;
+    assign is_found = tv_dm_found_target_pipeline;
+    assign block_out = tv_dm_target_block_pipeline;
 
 endmodule
