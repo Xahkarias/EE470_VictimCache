@@ -26,7 +26,22 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //used to contain evicted block
 	
 
+    //Expected Outputs:
+    /*
+        byte_out: 
+            0x00 on a failed fetch
+            8 bit correct data on a successful fetch 
+            8 bit garbage on a write
+        is_found:
+            0b1 on a sucessful fetch
+            0b0 on a failed fetch
+            0b0 on a write
+        block_out:
+            512 bit block that contains the selected byte on a read
+            512 bit block that contains the evicted data on a write
+    */
 
+    //TODO LATER: this cache is always reading or writing, can't I put a read signal?
 
     /* //////////////////////////////////////
 	PRE TL
@@ -50,21 +65,48 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	TL
 	////////////////////////////////////// */
     logic reset_TL_TV_reg;
+        //TODO: USE in pipeline registers
     assign reset_TL_TV_reg = reset || (tlb_miss && !pre_tl_tl_writeEn_pipeline);
         //the registers at the end of this section reset on two occassions:
         //1. If the reset is triggered
-        //2. If the TLB misses, and it is not in write mode
+        //2. If the TLB misses, AND it is not in write mode
 
+    logic tlb_miss_unfluxed;
+        //TODO: USE on both data blocks
+    mux2_1 tlb_smasher (.out(tlb_miss_unfluxed), .i0(tlb_miss), .i1(1'b0), .sel(pre_tl_tl_writeEn_pipeline));
+        //Here's a scenario, I am writing but tlb_miss gets a junk 1.
+        //Now this could mess everything up by squashing pipelines registers + disabling writes on the data blocks + lru controller
+        //The code ~6 lines above solves the former, and this solves the latter by forcing tlb misses to be 0 during a write 
+        //so this is just tlb_miss, but with a guaranteed value during a write
+        
     logic [49:0] ptag_vindex;
+        //TODO: USE in the comparator and vtag+index+valid data
     assign ptag_vindex = {phys_tag_ret, pretl_tl_vindex_pipeline};
         //this is the ptag+vindex
 
 
+    //////////// LRU CONTROLLER
+    logic [7:0] lru_info;
+        //this contains the bits that signify which block is the lru 
+        //TODO: plug into the two data blocks
 
+    logic [7:0] comparator_output
+        //this contains the output of the comparator which shows which block has the correct data
+        //TODO: use in cache data block
 
+    logic [7:0] lru_update
+        //this contains the inforamtion that is entering the LRU
+        //This is different from comparator_output because tlb_miss_unfluxed makes sure that this signal is zero on a read
 
+    genvar k;
+    generate
+        for (k = 0; k < 8; k = k + 1) begin
+            mux2_1 lru_update_muxer (.out(lru_update[k]), .i0(comparator_output[k]), .i1(1'b0), .sel(tlb_miss_unfluxed));
+        end
+        //this is the part that zeros out lru_update on a read
+    endgenerate
 
-
+    lru lru_controller (.lru_number(lru_info), .lru_update(lru_update), .add_cache(pre_tl_tl_writeEn_pipeline), .reset(reset), .clk(clk));
 
 
 
@@ -95,16 +137,6 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
     //TODO create data cache
 
-
-
-
-
-
-
-
-    lru lru_controller (.lru_number(), .lru_update(), .add_cache(), .reset(), .clk());
-
-
     logic found_target;
     logic [511:0] target_block;
     logic offset;
@@ -126,6 +158,24 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
 
     //TODO: make pipelines (reset them on a tlb miss if read)
+        //TODO: pipelines here use the reset_TL_TV_reg signal
+        //TODO: tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
+            //TODO: this means it resets on a restart and whenever a fetch fails OR it is in read mode
+            //TODOL this is to describe the behavior of the signal on a readmode instead of garbage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

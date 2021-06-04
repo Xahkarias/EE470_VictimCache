@@ -7,8 +7,16 @@ add wave -noupdate /lru_testbench/add_cache
 add wave -noupdate -radix binary /lru_testbench/lru_update
 add wave -noupdate -divider {New Divider}
 add wave -noupdate -radix binary /lru_testbench/lru_number
+add wave -noupdate -divider {New Divider}
+add wave -noupdate /lru_testbench/dut/output_1
+add wave -noupdate /lru_testbench/dut/output_2
+add wave -noupdate /lru_testbench/dut/output_3
+add wave -noupdate /lru_testbench/dut/output_4
+add wave -noupdate /lru_testbench/dut/output_5
+add wave -noupdate /lru_testbench/dut/output_6
+add wave -noupdate /lru_testbench/dut/output_7
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {938 ps} 0}
+WaveRestoreCursors {{Cursor 1} {1197 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -24,4 +32,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {100 ps} {1100 ps}
+WaveRestoreZoom {500 ps} {1500 ps}

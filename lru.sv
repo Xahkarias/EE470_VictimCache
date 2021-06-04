@@ -210,6 +210,7 @@ module lru_testbench;
             //order here oldest-newest: 23401675
                         @(posedge clk); lru_update <= 8'b00000000; add_cache <= 1'b0;  @(posedge clk); @(posedge clk);
                             //order here oldest-newest: 52340617
+        @(posedge clk); @(posedge clk);@(posedge clk); @(posedge clk);@(posedge clk); @(posedge clk);@(posedge clk); @(posedge clk);
 		$stop;
     end
 
