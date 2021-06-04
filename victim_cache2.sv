@@ -130,25 +130,44 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* //////////////////////////////////////
 	TV
 	////////////////////////////////////// */
     //declaring logic signals
-    //TODO: select word
-    //TODO: passthrough target block
+    logic [63:0] selected_word;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    genvar i;
+    generate
+        for (i = 0; i < 64; i = i + 1) begin
+            mux8_1 muxer1 (.out(selected_word[i]), 
+                .data({
+                    tl_tv_target_block_pipeline[i+448],
+                    tl_tv_target_block_pipeline[i+384],
+                    tl_tv_target_block_pipeline[i+320],
+                    tl_tv_target_block_pipeline[i+256],
+                    tl_tv_target_block_pipeline[i+192],
+                    tl_tv_target_block_pipeline[i+128],
+                    tl_tv_target_block_pipeline[i+64],
+                    tl_tv_target_block_pipeline[i]}), 
+                .sel(tl_tv_offset_pipeline[5:3]));
+        end
+        //this generates the stuff that picks which word
+    endgenerate
 
     //declaring outputs of the pipeline (for use in next one)
     logic tv_dm_found_target_pipeline;
@@ -156,25 +175,13 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     logic [2:0] tv_dm_byte_select_pipeline;
     logic [63:0] tv_dm_selected_word_pipeline;
 
+    register #(.width(1)) tv_dm_found_target_pipeline_reg (.data_out(tv_dm_found_target_pipeline), .data_in(tl_tv_found_target_pipeline), .write_en(1'b1), .reset(reset), .clk(clk));
+    register #(.width(512)) tv_dm_target_block_pipeline_reg (.data_out(tv_dm_target_block_pipeline), .data_in(tl_tv_target_block_pipeline), .write_en(1'b1), .reset(reset), .clk(clk));
+    register #(.width(3)) tv_dm_byte_select_pipeline_reg (.data_out(tv_dm_byte_select_pipeline), .data_in(tl_tv_offset_pipeline[2:0]), .write_en(1'b1), .reset(reset), .clk(clk));
+    register #(.width(64)) tv_dm_selected_word_pipeline_reg (.data_out(tv_dm_selected_word_pipeline), .data_in(selected_word), .write_en(1'b1), .reset(reset), .clk(clk));
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 
     /* //////////////////////////////////////
