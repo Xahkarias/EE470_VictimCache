@@ -58,7 +58,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     //declaring outputs of the pipeline (for use in next one)
     logic [5:0] pretl_tl_vindex_pipeline;
     logic [5:0] pretl_tl_offset_pipeline;
-    logic [511:0] pretl_tl_dataIn_pipeline
+    logic [511:0] pretl_tl_dataIn_pipeline;
     logic pre_tl_tl_writeEn_pipeline;
 
     //pipeline registers
@@ -99,10 +99,10 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //this contains the bits that signify which block is the lru 
         //TODO: plug into the two data blocks
 
-    logic [7:0] comparator_output
+    logic [7:0] comparator_output;
         //this contains the output of the comparator which shows which block has the correct data
 
-    logic [7:0] lru_update
+    logic [7:0] lru_update;
         //this contains the inforamtion that is entering the LRU
         //This is different from comparator_output because tlb_miss_unfluxed makes sure that this signal is zero on a read
 
@@ -226,7 +226,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
     register #(.width(512)) tl_tv_target_block_pipeline_reg (.data_out(tl_tv_target_block_pipeline), .data_in(target_block), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
 
-    register #(.width(6)) tl_tv_offset_pipelinee_reg (.data_out(tl_tv_offset_pipelinee_reg), .data_in(pretl_tl_offset_pipeline_reg), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
+    register #(.width(6)) tl_tv_offset_pipeline_reg (.data_out(tl_tv_offset_pipeline), .data_in(pretl_tl_offset_pipeline_reg), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
     //pipelines here use the reset_TL_TV_reg signal
     //tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
         //this means it resets on a restart and whenever a fetch fails OR it is in write mode
@@ -304,5 +304,72 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     assign byte_out = selected_byte;
     assign is_found = tv_dm_found_target_pipeline;
     assign block_out = tv_dm_target_block_pipeline;
+
+endmodule
+
+module victim_cache_testbench;
+    parameter ClockDelay = 50;
+
+    //inputs
+    logic [11:0] page_offset;
+        //remember that vindex is the first 6 bits
+        //and that the word/byte selector is the last 6 bits
+	logic [511:0] data_in;
+	logic write_en;
+	logic [43:0] phys_tag_ret;
+        //NOTE: this arrives a cycle late, but the testbench handles that
+	logic tlb_miss;
+		//NOTE: this arrives a cycle late, but the testbench handles that
+	logic reset;
+    logic clk;
+
+    //outputs
+	logic [7:0] byte_out;
+	logic is_found;
+    logic [511:0] block_out;
+    
+    initial begin // Set up the clock
+		clk <= 1;
+		forever #(ClockDelay/2) clk <= ~clk;
+	end
+
+    logic [43:0] phys_tag_ret_delayed;
+    logic tlb_miss_delayed;
+        //these represent the delay
+
+    always_ff @(posedge clk) begin
+        tlb_miss_delayed <= tlb_miss;
+        phys_tag_ret_delayed <= phys_tag_ret;
+	end
+
+
+
+
+
+
+
+
+    victim_cache dut (.page_offset, .data_in, .write_en, .phys_tag_ret(phys_tag_ret_delayed), .tlb_miss(tlb_miss_delayed), .reset, .clk, .byte_out, .is_found, .block_out);
+
+    initial begin
+        @(posedge clk);
+            //reset stage
+            reset <= 1'b1;
+            phys_tag_ret <= 44'h0;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h0;
+            write_en <= 1'b0;   
+        @(posedge clk);
+            //write for the first time
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hA;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hAAA;
+            write_en <= 1'b1;  
+        @(posedge clk);
+		$stop;
+    end
 
 endmodule

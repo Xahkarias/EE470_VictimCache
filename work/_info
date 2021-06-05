@@ -56,142 +56,142 @@ R11
 R12
 vD_FF
 R1
-R2
+Z13 !s110 1622894600
 !i10b 1
 !s100 2Ue59^TdEjb37`=BnA;ng1
 ITB0g]KCemobUB[?T4hLjl1
 R3
-Z13 !s105 D_FF_sv_unit
+Z14 !s105 D_FF_sv_unit
 S1
 R0
-Z14 w1621585436
-Z15 8./D_FF.sv
-Z16 F./D_FF.sv
+Z15 w1621585436
+Z16 8./D_FF.sv
+Z17 F./D_FF.sv
 L0 9
 R8
 r1
 !s85 0
 31
-R9
-Z17 !s107 ./D_FF.sv|
-Z18 !s90 -reportprogress|300|./D_FF.sv|
+Z18 !s108 1622894600.000000
+Z19 !s107 ./D_FF.sv|
+Z20 !s90 -reportprogress|300|./D_FF.sv|
 !i113 1
 R12
 n@d_@f@f
 vD_FF_testbench
 R1
-R2
+R13
 !i10b 1
 !s100 HkRmX3UfUWECdZd5lN]?e2
 I;jWo]NAdURDSK<g?fY0:b3
 R3
-R13
+R14
 S1
 R0
-R14
 R15
 R16
+R17
 L0 21
 R8
 r1
 !s85 0
 31
-R9
-R17
 R18
+R19
+R20
 !i113 1
 R12
 n@d_@f@f_testbench
 vlru
 R1
-R2
+R13
 !i10b 1
 !s100 eNnD7a6l:4U[i:8bm2DZ`3
 ISFmad2AW8V34]9bjaj<WV0
 R3
-Z19 !s105 lru_sv_unit
+Z21 !s105 lru_sv_unit
 S1
 R0
-Z20 w1622811744
-Z21 8./lru.sv
-Z22 F./lru.sv
+Z22 w1622811744
+Z23 8./lru.sv
+Z24 F./lru.sv
 L0 1
 R8
 r1
 !s85 0
 31
-R9
-Z23 !s107 ./lru.sv|
-Z24 !s90 -reportprogress|300|./lru.sv|
+R18
+Z25 !s107 ./lru.sv|
+Z26 !s90 -reportprogress|300|./lru.sv|
 !i113 1
 R12
 vlru_testbench
 R1
-R2
+R13
 !i10b 1
 !s100 7QK2XOSII6O=KoJ71;Q0f0
 I:igEHDERBPmDaEz[7lUR`3
 R3
-R19
+R21
 S1
 R0
-R20
-R21
 R22
+R23
+R24
 L0 164
 R8
 r1
 !s85 0
 31
-R9
-R23
-R24
+R18
+R25
+R26
 !i113 1
 R12
 vmux2_1
 R1
-R2
+R13
 !i10b 1
 !s100 @21zT_J;nHSRLH<:2I0Ib3
 Im`J1o8DD>m9MFOD?0`Ggg1
 R3
-Z25 !s105 mux2_1_sv_unit
+Z27 !s105 mux2_1_sv_unit
 S1
 R0
-Z26 w1621598722
-Z27 8./mux2_1.sv
-Z28 F./mux2_1.sv
+Z28 w1621598722
+Z29 8./mux2_1.sv
+Z30 F./mux2_1.sv
 L0 9
 R8
 r1
 !s85 0
 31
-R9
-Z29 !s107 ./mux2_1.sv|
-Z30 !s90 -reportprogress|300|./mux2_1.sv|
+R18
+Z31 !s107 ./mux2_1.sv|
+Z32 !s90 -reportprogress|300|./mux2_1.sv|
 !i113 1
 R12
 vmux2_1_testbench
 R1
-R2
+R13
 !i10b 1
 !s100 K?Q6R<SXVURf`i;B_7SLL0
 I<H_KWlFi9a0HZ2V_HDM3K3
 R3
-R25
+R27
 S1
 R0
-R26
-R27
 R28
+R29
+R30
 L0 19
 R8
 r1
 !s85 0
 31
-R9
-R29
-R30
+R18
+R31
+R32
 !i113 1
 R12
 vmux4_1_testbench
@@ -201,71 +201,71 @@ R1
 !s100 J[bWDj:?=nTCV0`@;6gZZ3
 IS<WWSDV=9JBg_G0HDUIeW0
 R3
-Z31 !s105 mux8_1_sv_unit
+Z33 !s105 mux8_1_sv_unit
 S1
 R0
 w1621595833
-Z32 8./mux8_1.sv
-Z33 F./mux8_1.sv
+Z34 8./mux8_1.sv
+Z35 F./mux8_1.sv
 L0 31
 R8
 r1
 !s85 0
 31
 !s108 1621597380.000000
-Z34 !s107 ./mux8_1.sv|
-Z35 !s90 -reportprogress|300|./mux8_1.sv|
+Z36 !s107 ./mux8_1.sv|
+Z37 !s90 -reportprogress|300|./mux8_1.sv|
 !i113 1
 R12
 vmux8_1
 R1
-R2
+R13
 !i10b 1
 !s100 9W^4^K6nnV`0BYUNlaUXO2
 IgA<zEK3ozn=>@JTh4VC;:0
 R3
-R31
+R33
 S1
 R0
-Z36 w1621597583
-R32
-R33
+Z38 w1621597583
+R34
+R35
 L0 2
 R8
 r1
 !s85 0
 31
-R9
-R34
-R35
+R18
+R36
+R37
 !i113 1
 R12
 vmux8_1_testbench
 R1
-R2
+R13
 !i10b 1
 !s100 KhkG`A6gI:`IS=;>AMDV93
 I_jJEQ89aVYBGbDSYR;ikJ1
 R3
-R31
+R33
 S1
 R0
-R36
-R32
-R33
+R38
+R34
+R35
 L0 30
 R8
 r1
 !s85 0
 31
-R9
-R34
-R35
+R18
+R36
+R37
 !i113 1
 R12
 vregister
 R1
-R2
+R13
 !i10b 1
 !s100 ?E^`428lX4GYjMgB6k<cN0
 IzSocZO`W<;m3h7>NhL7KT3
@@ -281,54 +281,77 @@ R8
 r1
 !s85 0
 31
-R9
+R18
 !s107 ./register.sv|
 !s90 -reportprogress|300|./register.sv|
 !i113 1
 R12
 vregx64
 R1
-Z37 !s110 1621585443
+Z39 !s110 1621585443
 !i10b 1
 !s100 CBQna6AGZKo1C]1de<U?61
 I^dN^]32mbJfB@>_k`Gmk_3
 R3
-Z38 !s105 regx64_sv_unit
+Z40 !s105 regx64_sv_unit
 S1
 R0
-Z39 w1621585432
-Z40 8./regx64.sv
-Z41 F./regx64.sv
+Z41 w1621585432
+Z42 8./regx64.sv
+Z43 F./regx64.sv
 L0 15
 R8
 r1
 !s85 0
 31
-Z42 !s108 1621585443.000000
-Z43 !s107 ./regx64.sv|
-Z44 !s90 -reportprogress|300|./regx64.sv|
+Z44 !s108 1621585443.000000
+Z45 !s107 ./regx64.sv|
+Z46 !s90 -reportprogress|300|./regx64.sv|
 !i113 1
 R12
 vregx64_testbench
 R1
-R37
+R39
 !i10b 1
 !s100 RfUoB7hcNg2I3:`FH[PQJ3
 IHj733S1Ud`U@6@JXR9JD>2
 R3
-R38
+R40
 S1
 R0
-R39
-R40
 R41
+R42
+R43
 L0 35
 R8
 r1
 !s85 0
 31
-R42
-R43
 R44
+R45
+R46
+!i113 1
+R12
+vvictim_cache_testbench
+R1
+!s110 1622894601
+!i10b 1
+!s100 MAdBK@QIW@JYKBLccAV@j1
+IHObDij=^H=oMmQULI_DR_1
+R3
+!s105 victim_cache2_sv_unit
+S1
+R0
+w1622894597
+8./victim_cache2.sv
+F./victim_cache2.sv
+L0 310
+R8
+r1
+!s85 0
+31
+!s108 1622894601.000000
+!s107 ./victim_cache2.sv|
+!s90 -reportprogress|300|./victim_cache2.sv|
 !i113 1
 R12
