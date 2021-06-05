@@ -1,4 +1,11 @@
+/*
+    Lawrence Atienza
+    EE 470
 
+    This is the better victim cache
+
+
+*/
 
 `timescale 1ns/10ps
 module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, reset, clk, byte_out, is_found, block_out);
@@ -41,6 +48,8 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
             512 bit block that contains the evicted data on a write
     */
 
+    //NOTE: this will break if you write with a block with the same ptag+vindex as an existing block, don't do that
+
     //TODO LATER: this cache is always reading or writing, can't I put a read signal?
 
     /* //////////////////////////////////////
@@ -77,8 +86,8 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //Here's a scenario, I am writing but tlb_miss gets a junk 1.
         //Now this could mess everything up by squashing pipelines registers + disabling writes on the data blocks + lru controller
         //The code ~6 lines above solves the former, and this solves the latter by forcing tlb misses to be 0 during a write 
-        //so this is just tlb_miss, but with a guaranteed value during a write
-        
+        //so this is just tlb_miss, but with a guaranteed value of 0 during a write
+
     logic [49:0] ptag_vindex;
         //TODO: USE in the comparator and vtag+index+valid data
     assign ptag_vindex = {phys_tag_ret, pretl_tl_vindex_pipeline};
@@ -92,7 +101,6 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
     logic [7:0] comparator_output
         //this contains the output of the comparator which shows which block has the correct data
-        //TODO: use in cache data block
 
     logic [7:0] lru_update
         //this contains the inforamtion that is entering the LRU
@@ -103,91 +111,126 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         for (k = 0; k < 8; k = k + 1) begin
             mux2_1 lru_update_muxer (.out(lru_update[k]), .i0(comparator_output[k]), .i1(1'b0), .sel(tlb_miss_unfluxed));
         end
-        //this is the part that zeros out lru_update on a read
+        //this is the part that zeros out lru_update on a miss
     endgenerate
 
     lru lru_controller (.lru_number(lru_info), .lru_update(lru_update), .add_cache(pre_tl_tl_writeEn_pipeline), .reset(reset), .clk(clk));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //TODO create data cache
-
-    logic found_target;
-    logic [511:0] target_block;
-    logic offset;
-
-
-    //TODO: take phystagret input
-    //TODO: take tlb miss input
     
-    //TODO: scan vindex memory for hit
-        //TODO: if so, output and update lru
-    //TODO:
+    //////////// Comparator
+    logic [49:0] pv_data_out [7:0];
+        //this is the output of the tag+index memory
+    logic [7:0] valid_data;
+        //these are the valid tags from tag+index memory
+    logic found_target;
+        //this goes into a pipeline
 
+    integer a;
+    initial begin
+        for (a = 0; a < 8; a = a + 1) begin
+            assign comparator_output[a] = (pv_data_out[a] ==  ptag_vindex) && valid_data[a];
+        end
+    end
+
+    assign found_target = |comparator_output;
+        //reduction operator on the output of comparator
+    
+    //////////// tag+index data (and validity)
+    logic [7:0] tagindex_memory_write;
+        //this controls if a specific tag block should be written to 
+
+    integer b;
+    initial begin
+        for (b = 0; b < 8; b = b + 1) begin
+            assign tagindex_memory_write[b] = (pre_tl_tl_writeEn_pipeline && lru_info[b]) && !tlb_miss_unfluxed;
+            //this will set which tag memory block should be written to, but also stops all writes on a tlb_miss
+
+            register #(.width(50)) ptag_vindex_data_block (.data_out(pv_data_out[b]), .data_in(ptag_vindex), .write_en(tagindex_memory_write[b]), .reset(reset), .clk(clk));
+            //outputs to the 2d array
+            //takes in ptag_vindex value, with the earlier boolean logic controling which one gets written to.
+
+            register #(.width(1)) valid_data_block (.data_out(valid_data[b]), .data_in(1'b1), .write_en(tagindex_memory_write[b]), .reset(reset), .clk(clk));
+            //memory is always valid after first write
+        end
+    end
+
+
+    //////////// actual data cache
+    logic [511:0] target_block;
+        //on read, it holds the target output
+        //on write, it holds the evicted block
+
+    logic [7:0] data_write_control;
+        //controls writes
+    
+    logic [511:0] cache_data_out [7:0];
+        //output wires for the data blocks
+
+    logic [7:0] output_selector;
+        //on a read, this should point to the block to read
+        //on a write, this should point to the evicted block
+
+    integer c;
+    initial begin
+        for (c = 0; c < 8; c = c + 1) begin
+            assign data_write_control[c] = (pre_tl_tl_writeEn_pipeline && lru_info[c]) && !tlb_miss_unfluxed;
+            //this will set which data block should be written to, but also stops all writes on a tlb_miss
+            //technically this is the same as tagindex_memory_write but I'm too lazy to change it now.
+
+            register #(.width(512)) actual_data_block (.data_out(cache_data_out[c]), .data_in(pretl_tl_dataIn_pipeline), .write_en(data_write_control[c]), .reset(reset), .clk(clk));
+            //outputs to the 2d array
+
+            mux2_1 output_selector_selector_mux (.out(output_selector[c]), .i0(comparator_output[c]), .i1(lru_info[c]), .sel(pre_tl_tl_writeEn_pipeline));
+            //this creates the behavior for output_selector
+            //this isnt connected to anything yet, its the next lines that achieves that
+        end
+    end
+
+    always_comb begin   
+        //this is a bit of a mess , i wanted to use gate level logic but ended up using rtl to make it easier
+        //easily the part that needs to be rewritten the most
+        if (output_selector[0] == 1'b1)
+            target_block = cache_data_out[0];
+        else if (output_selector[1] == 1'b1)
+            target_block = cache_data_out[1];
+        else if (output_selector[2] == 1'b1)
+            target_block = cache_data_out[2];
+        else if (output_selector[3] == 1'b1)
+            target_block = cache_data_out[3];
+        else if (output_selector[4] == 1'b1)
+            target_block = cache_data_out[4];
+        else if (output_selector[5] == 1'b1)
+            target_block = cache_data_out[5];
+        else if (output_selector[6] == 1'b1)
+            target_block = cache_data_out[6];
+        else if (output_selector[7] == 1'b1)
+            target_block = cache_data_out[7];
+        else 
+            target_block = 512'bX;
+            //this output is junkfied because if there is no output selector, then that means the read failed and thus the output doesnt actually matter
+    end
+
+
+
+    //////////// pipeline
     //declaring outputs of the pipeline (for use in next one)
     logic tl_tv_found_target_pipeline;
     logic [511:0] tl_tv_target_block_pipeline;
         //on read, it holds the target output
         //on write, it holds the evicted block
     logic [5:0] tl_tv_offset_pipeline;
+        //just copy this pretl_tl_offset_pipeline_reg
 
 
-    //TODO: make pipelines (reset them on a tlb miss if read)
-        //TODO: pipelines here use the reset_TL_TV_reg signal
-        //TODO: tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
-            //TODO: this means it resets on a restart and whenever a fetch fails OR it is in read mode
-            //TODOL this is to describe the behavior of the signal on a readmode instead of garbage
+    register #(.width(1)) tl_tv_found_target_pipeline_reg (.data_out(tl_tv_found_target_pipeline), .data_in(found_target), .write_en(1'b1), .reset(reset || !pre_tl_tl_writeEn_pipeline || tlb_miss), .clk(clk));
 
+    register #(.width(512)) tl_tv_target_block_pipeline_reg (.data_out(tl_tv_target_block_pipeline), .data_in(target_block), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    register #(.width(6)) tl_tv_offset_pipelinee_reg (.data_out(tl_tv_offset_pipelinee_reg), .data_in(pretl_tl_offset_pipeline_reg), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
+    //pipelines here use the reset_TL_TV_reg signal
+    //tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
+        //this means it resets on a restart and whenever a fetch fails OR it is in write mode
+        //this is to describe the behavior of the signal on a readmode instead of garbage
 
 
 
