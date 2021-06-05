@@ -74,14 +74,12 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	TL
 	////////////////////////////////////// */
     logic reset_TL_TV_reg;
-        //TODO: USE in pipeline registers
     assign reset_TL_TV_reg = reset || (tlb_miss && !pre_tl_tl_writeEn_pipeline);
         //the registers at the end of this section reset on two occassions:
         //1. If the reset is triggered
         //2. If the TLB misses, AND it is not in write mode
 
     logic tlb_miss_unfluxed;
-        //TODO: USE on both data blocks
     mux2_1 tlb_smasher (.out(tlb_miss_unfluxed), .i0(tlb_miss), .i1(1'b0), .sel(pre_tl_tl_writeEn_pipeline));
         //Here's a scenario, I am writing but tlb_miss gets a junk 1.
         //Now this could mess everything up by squashing pipelines registers + disabling writes on the data blocks + lru controller
@@ -89,7 +87,6 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //so this is just tlb_miss, but with a guaranteed value of 0 during a write
 
     logic [49:0] ptag_vindex;
-        //TODO: USE in the comparator and vtag+index+valid data
     assign ptag_vindex = {phys_tag_ret, pretl_tl_vindex_pipeline};
         //this is the ptag+vindex
 
@@ -97,7 +94,6 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     //////////// LRU CONTROLLER
     logic [7:0] lru_info;
         //this contains the bits that signify which block is the lru 
-        //TODO: plug into the two data blocks
 
     logic [7:0] comparator_output;
         //this contains the output of the comparator which shows which block has the correct data
@@ -219,14 +215,15 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //on read, it holds the target output
         //on write, it holds the evicted block
     logic [5:0] tl_tv_offset_pipeline;
-        //just copy this pretl_tl_offset_pipeline_reg
+        //just copy this pretl_tl_offset_pipeline
 
-
-    register #(.width(1)) tl_tv_found_target_pipeline_reg (.data_out(tl_tv_found_target_pipeline), .data_in(found_target), .write_en(1'b1), .reset(reset || !pre_tl_tl_writeEn_pipeline || tlb_miss), .clk(clk));
+    logic reset_tl_tv_found_targ_pipeline;
+    assign reset_tl_tv_found_targ_pipeline = (reset || pre_tl_tl_writeEn_pipeline) || tlb_miss;
+    register #(.width(1)) tl_tv_found_target_pipeline_reg (.data_out(tl_tv_found_target_pipeline), .data_in(found_target), .write_en(1'b1), .reset(reset_tl_tv_found_targ_pipeline), .clk(clk));
 
     register #(.width(512)) tl_tv_target_block_pipeline_reg (.data_out(tl_tv_target_block_pipeline), .data_in(target_block), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
 
-    register #(.width(6)) tl_tv_offset_pipeline_reg (.data_out(tl_tv_offset_pipeline), .data_in(pretl_tl_offset_pipeline_reg), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
+    register #(.width(6)) tl_tv_offset_pipeline_reg (.data_out(tl_tv_offset_pipeline), .data_in(pretl_tl_offset_pipeline), .write_en(1'b1), .reset(reset_TL_TV_reg), .clk(clk));
     //pipelines here use the reset_TL_TV_reg signal
     //tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
         //this means it resets on a restart and whenever a fetch fails OR it is in write mode
@@ -307,6 +304,19 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 
 endmodule
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 module victim_cache_testbench;
     parameter ClockDelay = 50;
 
@@ -342,13 +352,6 @@ module victim_cache_testbench;
         phys_tag_ret_delayed <= phys_tag_ret;
 	end
 
-
-
-
-
-
-
-
     victim_cache dut (.page_offset, .data_in, .write_en, .phys_tag_ret(phys_tag_ret_delayed), .tlb_miss(tlb_miss_delayed), .reset, .clk, .byte_out, .is_found, .block_out);
 
     initial begin
@@ -360,15 +363,111 @@ module victim_cache_testbench;
             page_offset <= 12'h0;
             data_in <= 512'h0;
             write_en <= 1'b0;   
+        $display("RESET COMPLETE");
+        $display("TESTING WRITING");
         @(posedge clk);
             //write for the first time
+            reset <= 1'b0;
+            phys_tag_ret <= 44'h1;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h111;
+            write_en <= 1'b1;
+        @(posedge clk);
+            //gonna fill up the writes
+            reset <= 1'b0;
+            phys_tag_ret <= 44'h2;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h222;
+            write_en <= 1'b1; 
+        @(posedge clk);
             reset <= 1'b0;
             phys_tag_ret <= 44'hA;
             tlb_miss <= 1'b0;
             page_offset <= 12'h0;
             data_in <= 512'hAAA;
-            write_en <= 1'b1;  
+            write_en <= 1'b1; 
         @(posedge clk);
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hB;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hBBB;
+            write_en <= 1'b1; 
+        @(posedge clk);
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hC;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hCCC;
+            write_en <= 1'b1; 
+        @(posedge clk);
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hD;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hDDD;
+            write_en <= 1'b1;
+        @(posedge clk);
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hE;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hEEE;
+            write_en <= 1'b1; 
+        @(posedge clk);
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hF;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'hFFF;
+            write_en <= 1'b1; 
+            $display("FILLING LAST CACHE SLOT");
+        @(posedge clk);
+            $display("READ FIRST CACHE SLOT");
+            //read the first slot
+            reset <= 1'b0;
+            phys_tag_ret <= 44'h1;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h111;
+            write_en <= 1'b0;
+        @(posedge clk);
+            $display("FILL LRU");
+            //do a write, this should evict the second slot
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hABC;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h999;
+            write_en <= 1'b1; 
+        @(posedge clk);
+            $display("READ THE LOAD FROM LAST CYCLE");
+            //immediately read new slot, should output the new information
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hABC;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h999;
+            write_en <= 1'b0; 
+        @(posedge clk);
+            $display("SEARCH WITH TLB MISS");
+            //this should report a fail, because of the tlb miss
+            //this has the same search charatcerissts as the last one for easy checking:
+                //if it reports found, then the tlb squasher is not working
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hABC;
+            tlb_miss <= 1'b1;
+            page_offset <= 12'h0;
+            data_in <= 512'h999;
+            write_en <= 1'b0; 
+            //TODO: this is fucked
+
+        @(posedge clk); write_en <= 1'b0; @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); 
+        @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk);
+        //TODO: need to test write with tlb miss being true (testing junk removal)
+        //TODO: test reading with no hits
 		$stop;
     end
 

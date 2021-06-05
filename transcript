@@ -1,1499 +1,245 @@
 # Reading D:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
-runlab_lru.do
-# couldn't execute ".\runlab_lru.do": no such file or directory
-do runlab_lru.do
+do runlab_victim_cache.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
+# Start time: 06:16:22 on Jun 05,2021
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:16:22 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
+# Start time: 06:16:23 on Jun 05,2021
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:16:23 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
-# vlog -reportprogress 300 ./bytecutter.sv 
-# -- Compiling module bytecutter
-# -- Compiling module bytecutter_testbench
-# 
-# Top level modules:
-# 	bytecutter_testbench
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
+# Start time: 06:16:23 on Jun 05,2021
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # -- Compiling module D_FF_testbench
 # 
 # Top level modules:
 # 	D_FF_testbench
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:16:23 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
+# Start time: 06:16:23 on Jun 05,2021
 # vlog -reportprogress 300 ./register.sv 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:16:23 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:03:38 on Jun 04,2021
+# Start time: 06:16:23 on Jun 05,2021
 # vlog -reportprogress 300 ./lru.sv 
 # -- Compiling module lru
 # -- Compiling module lru_testbench
 # 
 # Top level modules:
 # 	lru_testbench
-# End time: 06:03:38 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:16:23 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work lru_testbench 
-# Start time: 06:03:39 on Jun 04,2021
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:16:23 on Jun 05,2021
+# vlog -reportprogress 300 ./victim_cache2.sv 
+# -- Compiling module victim_cache
+# -- Compiling module victim_cache_testbench
+# 
+# Top level modules:
+# 	victim_cache_testbench
+# End time: 06:16:23 on Jun 05,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work victim_cache_testbench 
+# Start time: 06:16:23 on Jun 05,2021
 # Loading sv_std.std
-# Loading work.lru_testbench
-# Loading work.lru
+# Loading work.victim_cache_testbench
+# Loading work.victim_cache
 # Loading work.register
 # Loading work.mux2_1
+# Loading work.lru
 # Loading work.D_FF
+# Loading work.mux8_1
+# ** Warning: Design size of 12979 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./lru.sv(214)
-#    Time: 1450 ps  Iteration: 1  Instance: /lru_testbench
-# Break in Module lru_testbench at ./lru.sv line 214
-add wave -position end  sim:/lru_testbench/dut/output_1
-add wave -position end  sim:/lru_testbench/dut/output_2
-add wave -position end  sim:/lru_testbench/dut/output_3
-add wave -position end  sim:/lru_testbench/dut/output_4
-add wave -position end  sim:/lru_testbench/dut/output_5
-add wave -position end  sim:/lru_testbench/dut/output_6
-add wave -position end  sim:/lru_testbench/dut/output_7
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/eveni/Documents/Homework/EE470/lru_wave.do
-do runlab_lru.do
+# RESET COMPLETE
+# TESTING WRITING
+# FILLING LAST CACHE SLOT
+# READ FIRST CACHE SLOT
+# FILL LRU
+# READ THE LOAD FROM LAST CYCLE
+# SEARCH WITH TLB MISS
+# ** Note: $stop    : ./victim_cache2.sv(471)
+#    Time: 1100 ns  Iteration: 1  Instance: /victim_cache_testbench
+# Break in Module victim_cache_testbench at ./victim_cache2.sv line 471
+do runlab_victim_cache.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
+# Start time: 06:19:25 on Jun 05,2021
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
+# Start time: 06:19:26 on Jun 05,2021
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
-# vlog -reportprogress 300 ./bytecutter.sv 
-# -- Compiling module bytecutter
-# -- Compiling module bytecutter_testbench
-# 
-# Top level modules:
-# 	bytecutter_testbench
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
+# Start time: 06:19:26 on Jun 05,2021
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # -- Compiling module D_FF_testbench
 # 
 # Top level modules:
 # 	D_FF_testbench
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
+# Start time: 06:19:26 on Jun 05,2021
 # vlog -reportprogress 300 ./register.sv 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:05:50 on Jun 04,2021
+# Start time: 06:19:26 on Jun 05,2021
 # vlog -reportprogress 300 ./lru.sv 
 # -- Compiling module lru
 # -- Compiling module lru_testbench
 # 
 # Top level modules:
 # 	lru_testbench
-# End time: 06:05:50 on Jun 04,2021, Elapsed time: 0:00:00
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 06:05:52 on Jun 04,2021, Elapsed time: 0:02:13
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:19:26 on Jun 05,2021
+# vlog -reportprogress 300 ./victim_cache2.sv 
+# -- Compiling module victim_cache
+# -- Compiling module victim_cache_testbench
+# 
+# Top level modules:
+# 	victim_cache_testbench
+# End time: 06:19:26 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work lru_testbench 
-# Start time: 06:05:52 on Jun 04,2021
+# End time: 06:19:28 on Jun 05,2021, Elapsed time: 0:03:05
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work victim_cache_testbench 
+# Start time: 06:19:28 on Jun 05,2021
 # Loading sv_std.std
-# Loading work.lru_testbench
-# Loading work.lru
+# Loading work.victim_cache_testbench
+# Loading work.victim_cache
 # Loading work.register
 # Loading work.mux2_1
+# Loading work.lru
 # Loading work.D_FF
+# Loading work.mux8_1
+# ** Warning: Design size of 12979 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./lru.sv(214)
-#    Time: 1450 ps  Iteration: 1  Instance: /lru_testbench
-# Break in Module lru_testbench at ./lru.sv line 214
+# RESET COMPLETE
+# TESTING WRITING
+# FILLING LAST CACHE SLOT
+# READ FIRST CACHE SLOT
+# FILL LRU
+# READ THE LOAD FROM LAST CYCLE
+# SEARCH WITH TLB MISS
+# ** Note: $stop    : ./victim_cache2.sv(471)
+#    Time: 1100 ns  Iteration: 1  Instance: /victim_cache_testbench
+# Break in Module victim_cache_testbench at ./victim_cache2.sv line 471
 do runlab_victim_cache.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
+# Start time: 06:19:53 on Jun 05,2021
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:19:53 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
+# Start time: 06:19:53 on Jun 05,2021
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:19:53 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
+# Start time: 06:19:53 on Jun 05,2021
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # -- Compiling module D_FF_testbench
 # 
 # Top level modules:
 # 	D_FF_testbench
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:19:53 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
+# Start time: 06:19:53 on Jun 05,2021
 # vlog -reportprogress 300 ./register.sv 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:19:53 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
+# Start time: 06:19:53 on Jun 05,2021
 # vlog -reportprogress 300 ./lru.sv 
 # -- Compiling module lru
 # -- Compiling module lru_testbench
 # 
 # Top level modules:
 # 	lru_testbench
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:19:54 on Jun 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:21 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: (vlog-13069) ./victim_cache2.sv(62): near "logic": syntax error, unexpected "SystemVerilog keyword 'logic'", expecting ';' or ','.
-# ** Error: (vlog-13069) ./victim_cache2.sv(105): near "logic": syntax error, unexpected "SystemVerilog keyword 'logic'", expecting ';' or ','.
-# ** Error: ./victim_cache2.sv(111): (vlog-2730) Undefined variable: 'k'.
-# ** Error: ./victim_cache2.sv(111): 'k' is an invalid type in Generate loop. Must be a genvar.
-# ** Error: ./victim_cache2.sv(112): (vlog-2730) Undefined variable: 'lru_update'.
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# ** Error: ./victim_cache2.sv(229): 'tl_tv_offset_pipelinee_reg' already declared in this scope.
-# -- Compiling module victim_cache_testbench
-# End time: 04:56:21 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 14, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:56:41 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# ** Error: ./victim_cache2.sv(229): 'tl_tv_offset_pipelinee_reg' already declared in this scope.
-# -- Compiling module victim_cache_testbench
-# End time: 04:56:41 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 9, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:32 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 04:58:33 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:33 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 04:58:33 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:33 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 04:58:33 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:33 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 04:58:33 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:33 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 04:58:33 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 04:58:33 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "ptag_vindex_data_block": syntax error, unexpected IDENTIFIER, expecting ';'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(152): near "valid_data_block": syntax error, unexpected IDENTIFIER, expecting ';'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# ** Error: ./victim_cache2.sv(229): 'tl_tv_offset_pipelinee_reg' already declared in this scope.
-# -- Compiling module victim_cache_testbench
-# End time: 04:58:34 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 9, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:49 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:01:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:49 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:01:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:50 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:01:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:50 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:01:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:50 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:01:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:01:50 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# ** Error: ./victim_cache2.sv(229): 'tl_tv_offset_pipelinee_reg' already declared in this scope.
-# -- Compiling module victim_cache_testbench
-# End time: 05:01:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 9, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:20 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:03:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:20 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:03:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:20 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:03:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:20 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:03:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:20 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:03:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:03:21 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:03:21 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:07:29 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:07:29 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:07:29 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:07:29 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:07:29 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:29 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(129): (vlog-2730) Undefined variable: 'a'.
-# ** Error: ./victim_cache2.sv(146): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(149): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(149): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(177): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(181): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(181): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(184): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:07:30 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 8, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:07:58 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(147): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(150): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(150): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(178): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(182): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(182): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(185): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:07:58 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:38 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:12:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:54 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:12:54 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:54 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:12:54 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:54 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:12:54 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:54 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:12:55 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:55 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:12:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:12:55 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:12:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:13:59 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(131): Bit-select of reg not allowed in procedural continuous assignment: comparator_output.
-# ** Error: ./victim_cache2.sv(145): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(148): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(148): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(176): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(180): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(180): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(183): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:13:59 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:15:11 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(154): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(157): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(157): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(185): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(189): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(189): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(192): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:15:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:48 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:49 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:49 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:49 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:49 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:16:49 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(159): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(159): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(195): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(199): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(199): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(202): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:16:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:38 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:17:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:38 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:17:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:38 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:17:38 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:38 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:17:39 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:39 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:17:39 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:39 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(156): Bit-select of reg not allowed in procedural continuous assignment: tagindex_memory_write.
-# ** Error: ./victim_cache2.sv(159): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(159): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(195): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(199): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(199): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(202): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:17:39 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:54 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:55 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:55 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:55 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:55 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:17:55 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(159): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(159): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(195): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(199): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(199): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(202): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:17:55 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:22 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(159): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(159): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(196): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(200): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(200): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(203): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:18:22 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:27 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:18:27 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:28 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:18:28 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:28 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:18:28 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:28 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:18:28 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:28 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:18:28 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:18:28 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(159): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(159): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(196): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(200): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(200): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(203): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:18:28 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:08 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:19:08 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:08 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:19:09 on Jun 05,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:09 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:19:09 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:09 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:19:09 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:09 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:19:09 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:09 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(196): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(200): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(200): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(203): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:19:09 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:19:20 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# ** Error: ./victim_cache2.sv(197): Bit-select of reg not allowed in procedural continuous assignment: data_write_control.
-# ** Error: ./victim_cache2.sv(201): (vlog-2730) Undefined variable: 'register'.
-# ** Error: (vlog-13069) ./victim_cache2.sv(201): near "#": syntax error, unexpected '#'.
-# ** Error: ./victim_cache2.sv(204): Checker 'mux2_1' not found.  Instantiation 'output_selector_selector_mux' must be of a visible checker.
-# -- Compiling module victim_cache_testbench
-# End time: 05:19:20 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# ** Error: D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab_victim_cache.do line 12
-# D:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./victim_cache2.sv""
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:21:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:21:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:21:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:21:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:21:11 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:21:11 on Jun 05,2021
+# Start time: 06:19:54 on Jun 05,2021
 # vlog -reportprogress 300 ./victim_cache2.sv 
 # -- Compiling module victim_cache
 # -- Compiling module victim_cache_testbench
 # 
 # Top level modules:
 # 	victim_cache_testbench
-# End time: 05:21:12 on Jun 05,2021, Elapsed time: 0:00:01
+# End time: 06:19:54 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 05:21:59 on Jun 05,2021, Elapsed time: 23:16:07
-# Errors: 188, Warnings: 0
+# End time: 06:19:55 on Jun 05,2021, Elapsed time: 0:00:27
+# Errors: 0, Warnings: 1
 # vsim -voptargs=""+acc"" -t 1ps -lib work victim_cache_testbench 
-# Start time: 05:22:00 on Jun 05,2021
+# Start time: 06:19:55 on Jun 05,2021
 # Loading sv_std.std
 # Loading work.victim_cache_testbench
 # Loading work.victim_cache
@@ -1502,81 +248,87 @@ do runlab_victim_cache.do
 # Loading work.lru
 # Loading work.D_FF
 # Loading work.mux8_1
-# ** Warning: (vsim-3015) ./victim_cache2.sv(249): [PCDPC] - Port size (6) does not match connection size (1) for port 'data_in'. The port definition is at: ./register.sv(9).
-#    Time: 0 ps  Iteration: 0  Instance: /victim_cache_testbench/dut/tl_tv_offset_pipeline_reg File: ./register.sv
 # ** Warning: Design size of 12979 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# ** Error: Cannot open macro file: victim_cache_wave.do
-# Error in macro ./runlab_victim_cache.do line 22
-# Cannot open macro file: victim_cache_wave.do
-#     while executing
-# "do victim_cache_wave.do"
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# RESET COMPLETE
+# TESTING WRITING
+# FILLING LAST CACHE SLOT
+# READ FIRST CACHE SLOT
+# FILL LRU
+# READ THE LOAD FROM LAST CYCLE
+# SEARCH WITH TLB MISS
+# ** Note: $stop    : ./victim_cache2.sv(472)
+#    Time: 1100 ns  Iteration: 1  Instance: /victim_cache_testbench
+# Break in Module victim_cache_testbench at ./victim_cache2.sv line 472
 do runlab_victim_cache.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:49 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # -- Compiling module mux2_1_testbench
 # 
 # Top level modules:
 # 	mux2_1_testbench
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:01
+# End time: 06:20:48 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:50 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # -- Compiling module mux8_1_testbench
 # 
 # Top level modules:
 # 	mux8_1_testbench
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:20:48 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:50 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # -- Compiling module D_FF_testbench
 # 
 # Top level modules:
 # 	D_FF_testbench
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:20:48 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:50 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./register.sv 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:20:48 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:50 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./lru.sv 
 # -- Compiling module lru
 # -- Compiling module lru_testbench
 # 
 # Top level modules:
 # 	lru_testbench
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:20:48 on Jun 05,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:22:50 on Jun 05,2021
+# Start time: 06:20:48 on Jun 05,2021
 # vlog -reportprogress 300 ./victim_cache2.sv 
 # -- Compiling module victim_cache
 # -- Compiling module victim_cache_testbench
 # 
 # Top level modules:
 # 	victim_cache_testbench
-# End time: 05:22:50 on Jun 05,2021, Elapsed time: 0:00:00
+# End time: 06:20:49 on Jun 05,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# End time: 05:22:55 on Jun 05,2021, Elapsed time: 0:00:55
-# Errors: 3, Warnings: 2
+# End time: 06:20:53 on Jun 05,2021, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 1
 # vsim -voptargs=""+acc"" -t 1ps -lib work victim_cache_testbench 
-# Start time: 05:22:55 on Jun 05,2021
+# Start time: 06:20:53 on Jun 05,2021
 # Loading sv_std.std
 # Loading work.victim_cache_testbench
 # Loading work.victim_cache
@@ -1585,96 +337,20 @@ do runlab_victim_cache.do
 # Loading work.lru
 # Loading work.D_FF
 # Loading work.mux8_1
-# ** Warning: (vsim-3015) ./victim_cache2.sv(249): [PCDPC] - Port size (6) does not match connection size (1) for port 'data_in'. The port definition is at: ./register.sv(9).
-#    Time: 0 ps  Iteration: 0  Instance: /victim_cache_testbench/dut/tl_tv_offset_pipeline_reg File: ./register.sv
 # ** Warning: Design size of 12979 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# ** Error: Cannot open macro file: victim_cache_wave.do
-# Error in macro ./runlab_victim_cache.do line 22
-# Cannot open macro file: victim_cache_wave.do
-#     while executing
-# "do victim_cache_wave.do"
-do runlab_victim_cache.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:49 on Jun 05,2021
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# -- Compiling module mux2_1_testbench
-# 
-# Top level modules:
-# 	mux2_1_testbench
-# End time: 05:23:49 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:50 on Jun 05,2021
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# -- Compiling module mux8_1_testbench
-# 
-# Top level modules:
-# 	mux8_1_testbench
-# End time: 05:23:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:50 on Jun 05,2021
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# -- Compiling module D_FF_testbench
-# 
-# Top level modules:
-# 	D_FF_testbench
-# End time: 05:23:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:50 on Jun 05,2021
-# vlog -reportprogress 300 ./register.sv 
-# -- Compiling module register
-# 
-# Top level modules:
-# 	register
-# End time: 05:23:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:50 on Jun 05,2021
-# vlog -reportprogress 300 ./lru.sv 
-# -- Compiling module lru
-# -- Compiling module lru_testbench
-# 
-# Top level modules:
-# 	lru_testbench
-# End time: 05:23:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 05:23:50 on Jun 05,2021
-# vlog -reportprogress 300 ./victim_cache2.sv 
-# -- Compiling module victim_cache
-# -- Compiling module victim_cache_testbench
-# 
-# Top level modules:
-# 	victim_cache_testbench
-# End time: 05:23:50 on Jun 05,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 05:23:55 on Jun 05,2021, Elapsed time: 0:01:00
-# Errors: 3, Warnings: 2
-# vsim -voptargs=""+acc"" -t 1ps -lib work victim_cache_testbench 
-# Start time: 05:23:55 on Jun 05,2021
-# Loading sv_std.std
-# Loading work.victim_cache_testbench
-# Loading work.victim_cache
-# Loading work.register
-# Loading work.mux2_1
-# Loading work.lru
-# Loading work.D_FF
-# Loading work.mux8_1
-# ** Warning: (vsim-3015) ./victim_cache2.sv(239): [PCDPC] - Port size (6) does not match connection size (1) for port 'data_in'. The port definition is at: ./register.sv(9).
-#    Time: 0 ps  Iteration: 0  Instance: /victim_cache_testbench/dut/tl_tv_offset_pipeline_reg File: ./register.sv
-# ** Warning: Design size of 12979 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# ** Error: Cannot open macro file: victim_cache_wave.do
-# Error in macro ./runlab_victim_cache.do line 22
-# Cannot open macro file: victim_cache_wave.do
-#     while executing
-# "do victim_cache_wave.do"
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# RESET COMPLETE
+# TESTING WRITING
+# FILLING LAST CACHE SLOT
+# READ FIRST CACHE SLOT
+# FILL LRU
+# READ THE LOAD FROM LAST CYCLE
+# SEARCH WITH TLB MISS
+# ** Note: $stop    : ./victim_cache2.sv(472)
+#    Time: 1100 ns  Iteration: 1  Instance: /victim_cache_testbench
+# Break in Module victim_cache_testbench at ./victim_cache2.sv line 472
+# WARNING: No extended dataflow license exists
