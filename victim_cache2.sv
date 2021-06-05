@@ -125,12 +125,13 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     logic found_target;
         //this goes into a pipeline
 
-    integer a;
-    initial begin
+    
+    genvar a;
+    generate
         for (a = 0; a < 8; a = a + 1) begin
             assign comparator_output[a] = (pv_data_out[a] ==  ptag_vindex) && valid_data[a];
         end
-    end
+    endgenerate
 
     assign found_target = |comparator_output;
         //reduction operator on the output of comparator
@@ -139,10 +140,10 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     logic [7:0] tagindex_memory_write;
         //this controls if a specific tag block should be written to 
 
-    integer b;
-    initial begin
+    genvar b;
+    generate 
         for (b = 0; b < 8; b = b + 1) begin
-            assign tagindex_memory_write[b] = (pre_tl_tl_writeEn_pipeline && lru_info[b]) && !tlb_miss_unfluxed;
+            assign tagindex_memory_write[b] = (pre_tl_tl_writeEn_pipeline && lru_info[b]) && !tlb_miss_unfluxed; 
             //this will set which tag memory block should be written to, but also stops all writes on a tlb_miss
 
             register #(.width(50)) ptag_vindex_data_block (.data_out(pv_data_out[b]), .data_in(ptag_vindex), .write_en(tagindex_memory_write[b]), .reset(reset), .clk(clk));
@@ -152,8 +153,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
             register #(.width(1)) valid_data_block (.data_out(valid_data[b]), .data_in(1'b1), .write_en(tagindex_memory_write[b]), .reset(reset), .clk(clk));
             //memory is always valid after first write
         end
-    end
-
+    endgenerate
 
     //////////// actual data cache
     logic [511:0] target_block;
@@ -170,8 +170,8 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
         //on a read, this should point to the block to read
         //on a write, this should point to the evicted block
 
-    integer c;
-    initial begin
+    genvar c;
+    generate
         for (c = 0; c < 8; c = c + 1) begin
             assign data_write_control[c] = (pre_tl_tl_writeEn_pipeline && lru_info[c]) && !tlb_miss_unfluxed;
             //this will set which data block should be written to, but also stops all writes on a tlb_miss
@@ -184,7 +184,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
             //this creates the behavior for output_selector
             //this isnt connected to anything yet, its the next lines that achieves that
         end
-    end
+    endgenerate
 
     always_comb begin   
         //this is a bit of a mess , i wanted to use gate level logic but ended up using rtl to make it easier
