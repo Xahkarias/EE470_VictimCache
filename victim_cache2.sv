@@ -462,12 +462,30 @@ module victim_cache_testbench;
             page_offset <= 12'h0;
             data_in <= 512'h999;
             write_en <= 1'b0; 
-            //TODO: this is fucked
+        @(posedge clk);
+            $display("SEARCH WITH TAG MISS");
+            //this should report a fail, 
+            reset <= 1'b0;
+            phys_tag_ret <= 44'hCAB;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h999;
+            write_en <= 1'b0; 
+        @(posedge clk);
+            $display("READ FIRST CACHE SLOT");
+            //the previous cycle outputs garbage in byte_out and block_out due to the miss
+            //this is to make sure that it can output real values again
+            //read the first slot
+            reset <= 1'b0;
+            phys_tag_ret <= 44'h1;
+            tlb_miss <= 1'b0;
+            page_offset <= 12'h0;
+            data_in <= 512'h111;
+            write_en <= 1'b0;
 
         @(posedge clk); write_en <= 1'b0; @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); 
         @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk);
         //TODO: need to test write with tlb miss being true (testing junk removal)
-        //TODO: test reading with no hits
 		$stop;
     end
 
