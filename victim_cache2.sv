@@ -1,5 +1,5 @@
 /*
-    Lawrence Atienza
+    Lawrence Atienza / Duy Vuong
     EE 470
 
     This is the better victim cache
@@ -28,7 +28,8 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
 	output logic [7:0] byte_out;
 		//the result of the victim cache search
 	output logic is_found;
-		//triggered if data is actually found in the data cache
+		//on read, it holds the target output
+        //on write, it holds the evicted block cache
     output logic [511:0] block_out;
         //used to contain evicted block
 	
@@ -51,6 +52,7 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     //NOTE: this will break if you write with a block with the same ptag+vindex as an existing block, don't do that
 
     //TODO LATER: this cache is always reading or writing, can't I put a read signal?
+        //NOTE: read report to learn more about this
 
     /* //////////////////////////////////////
 	PRE TL
@@ -228,10 +230,6 @@ module victim_cache (page_offset, data_in, write_en, phys_tag_ret, tlb_miss, res
     //tl_tv_found_target_pipeline register instead uses (reset || !pre_tl_tl_writeEn_pipeline || tlb_miss)
         //this means it resets on a restart and whenever a fetch fails OR it is in write mode
         //this is to describe the behavior of the signal on a readmode instead of garbage
-
-
-
-
 
 
 

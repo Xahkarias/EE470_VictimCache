@@ -1,4 +1,11 @@
+/*
+    Lawrence Atienza / Duy Vuong
+    EE 470
 
+    This is the BAD victim cache
+
+
+*/
 
 `timescale 1ns/10ps
 module victim_cache (addr_in, data_in, write_en, phys_tag_ret, tlb_miss, reset, byte_out, data_out, is_found, clk);

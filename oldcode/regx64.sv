@@ -9,6 +9,8 @@
 	data is fed into it. I personally feel that this is closer to reality (a register holding random values
 	from past use until given a value), and makes debugging easier due to the red line showing up
 	if a calculation uses a value from a garbage filled register.
+
+	NOTE: OLD CODE, AM USING DUY's REGISTER FILE INSTEAD
 */
 
 module regx64 (data_out, data_in, write_en, clk);

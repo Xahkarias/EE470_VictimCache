@@ -1,4 +1,12 @@
 
+/*
+    Lawrence Atienza
+    EE 470
+
+    Old code for the bad victim cache, not needed but kept for report purposes
+
+
+*/
 module bytecutter (block_in, offset, byte_out);
     input logic [511:0] block_in;
     input logic [5:0] offset;

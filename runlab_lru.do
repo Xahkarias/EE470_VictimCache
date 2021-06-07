@@ -6,7 +6,7 @@ vlib work
 #     their own "vlog" line below.
 vlog "./mux2_1.sv"
 vlog "./mux8_1.sv"
-vlog "./bytecutter.sv"
+#vlog "./oldcode/bytecutter.sv"
 vlog "./D_FF.sv"
 vlog "./register.sv"
 vlog "./lru.sv"

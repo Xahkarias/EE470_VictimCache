@@ -1,3 +1,8 @@
+/*
+    Duy Vuong
+    EE 469
+
+*/
 
 // register to store information between stages
 // different info will have different width

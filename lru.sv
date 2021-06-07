@@ -1,3 +1,11 @@
+/*
+    Lawrence Atienza
+    EE 470
+
+    This is the LRU controller, as described in the presentation and report
+
+
+*/
 module lru (lru_number, lru_update, add_cache, reset, clk);
     output logic [7:0] lru_number;
         //each bit corresponds to which thing is the lru
