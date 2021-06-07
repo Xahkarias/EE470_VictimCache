@@ -483,7 +483,7 @@ module victim_cache_testbench;
 
         @(posedge clk); write_en <= 1'b0; @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); 
         @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk); @(posedge clk);
-        //TODO: need to test write with tlb miss being true (testing junk removal)
+
 		$stop;
     end
 
